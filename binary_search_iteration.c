@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define max 10
-void sential_search(int a[],int n,int key)
+void binary_search(int a[],int n,int key)
 {
     int low=0,mid,high=n-1;                         
     while(low<high)                                 
@@ -11,7 +11,7 @@ void sential_search(int a[],int n,int key)
             printf("key found \n");
             break;
         }
-        if(key<mid)
+        if(key<a[mid])
             high=mid-1;
         else
             low=mid+1;
@@ -22,8 +22,8 @@ void sential_search(int a[],int n,int key)
 int main()
 {
     int a[max]={1,2,3,4,5,6};
-    sential_search(a,6,3);
-    sential_search(a,6,9);
+    binary_search(a,6,3);
+    binary_search(a,6,9);
 
     return 0;
 }

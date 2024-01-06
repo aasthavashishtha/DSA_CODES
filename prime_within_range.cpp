@@ -1,9 +1,12 @@
+/*prime numbers are positive number which are either divided by 1 or by themselves 
+ negative numbers are neither considered as prime nor non prime
+*/
 #include<iostream>
 #include<math.h>
 using namespace std;
 bool is_prime(int num)
 {
-    if(num>0)
+    if(num>0)                     //checking is number positive or not if positive the check is it prime or non prime                                
     {
         for(int i=2;i<sqrt(num);i++)
         {
